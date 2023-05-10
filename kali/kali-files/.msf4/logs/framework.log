@@ -1,0 +1,17 @@
+[05/09/2023 20:19:20] [e(0)] core: Failed to connect to the database: No database YAML file
+[05/09/2023 20:19:20] [d(0)] core: Created user based module store
+[05/09/2023 20:19:23] [d(0)] core: HistoryManager.push_context name: :msfconsole
+[05/09/2023 20:51:39] [e(0)] core: Failed to connect to the database: No database YAML file
+[05/09/2023 20:51:40] [e(0)] core: Msf::OptionValidateError : One or more options failed to validate: LHOST, LPORT.
+/usr/share/metasploit-framework/lib/msf/core/option_container.rb:251:in `validate'
+/usr/share/metasploit-framework/lib/msf/core/module/options.rb:21:in `validate'
+/usr/share/metasploit-framework/lib/msf/core/encoded_payload.rb:63:in `generate'
+/usr/share/metasploit-framework/lib/msf/core/encoded_payload.rb:24:in `create'
+/usr/share/metasploit-framework/lib/msf/base/simple/payload.rb:52:in `generate_simple'
+/usr/share/metasploit-framework/lib/msf/base/simple/payload.rb:139:in `generate_simple'
+/usr/share/metasploit-framework/lib/msf/core/payload_generator.rb:478:in `generate_raw_payload'
+/usr/share/metasploit-framework/lib/msf/core/payload_generator.rb:422:in `generate_payload'
+/usr/bin/msfvenom:477:in `<main>'
+[05/09/2023 20:54:49] [e(0)] core: Failed to connect to the database: No database YAML file
+[05/09/2023 21:01:04] [e(0)] core: Exploit failed (multi/handler): Interrupt  - Interrupt 
+[05/09/2023 21:01:12] [d(0)] core: HistoryManager.pop_context name: :msfconsole
