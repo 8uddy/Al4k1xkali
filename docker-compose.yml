@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  kali:
+    build: 
+      context: ./kali
+    volumes:
+      - ./kali/kali-files:/root
+    network_mode: host
+    command: /bin/bash -c "trap 'exit 0' INT; while true; do sleep 1; done"
+
+  target:
+    build: 
+      context: ./target
+    volumes:
+      - ./target/target-files:/root
+    networks:
+      - pentest-network
+
+  dvwa:
+    image: vulnerables/web-dvwa
+    networks:
+      - pentest-network
+    environment:
+      - MYSQL_USER=dvwa
+      - MYSQL_PASSWORD=p@ssw0rd
+      - MYSQL_DATABASE=dvwa
+    ports:
+      - "80:80"
+
+networks:
+  pentest-network:
+    driver: bridge
