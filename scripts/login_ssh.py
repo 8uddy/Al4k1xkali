@@ -1,15 +1,15 @@
 import paramiko
 
-def ssh_login(username, password=None, key_filename=None):
+def ssh_login(host, username, password=None, key_filename=None):
     # SSH-Verbindung herstellen
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     
     try:
         if key_filename:
-            client.connect(hostname='DEINE_HOSTNAME', username=username, key_filename=key_filename)
+            client.connect(hostname=host, username=username, key_filename=key_filename)
         elif password:
-            client.connect(hostname='172.19.0.2', username=username, password=password)
+            client.connect(hostname=host, username=username, password=password)
         else:
             raise ValueError("Es muss entweder ein Passwort oder ein Key-Dateiname angegeben werden.")
 
@@ -27,10 +27,13 @@ def ssh_login(username, password=None, key_filename=None):
         client.close()
 
 # Benutzerinteraktion für die Authentifizierungsmethode
+
+#TODO create .env file and create function
 auth_method = input("Wähle eine Authentifizierungsmethode (1 für Benutzername/Passwort, 2 für Key): ")
 
 if auth_method == '1':
     # Benutzername/Passwort-Authentifizierung
+    host = input("Host: ")
     username = input("Benutzername: ")
     password = input("Passwort: ")
     ssh_login(username, password=password)
