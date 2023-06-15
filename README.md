@@ -42,6 +42,8 @@ chmod +x start.sh
 ### DVWA
 - https://hub.docker.com/r/vulnerables/web-dvwa
 - https://github.com/digininja/DVWA/tree/master/vulnerabilities
+You can also use this to reset the administrator credentials ("admin // password") at any stage.
+
 
 
 ##### Remember to always stay safe and have fun exploring! 👨‍💻👩‍💻
