@@ -5,6 +5,7 @@ Welcome to Al4k1xkali! This wicked Docker-Compose-based pen-testing lab is locke
 - **Kali**: This ain't just any Docker container, it's armed with Kali Linux, the Swiss Army knife of pen testing. It's got your back!
 - **Target**: An intentionally vulnerable Docker container that serves as your testing target. It's begging to be hacked!
 - **DVWA**: The notorious Damn Vulnerable Web Application (DVWA), a PHP/MySQL web server with intentional vulnerabilities. It's a hacker's playground! 
+- **scripts**: Toolsets for pentesting and server-maintainance! 
 
 ## 💻 Prerequisites
 
