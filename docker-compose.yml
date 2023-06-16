@@ -6,6 +6,7 @@ services:
       context: ./kali
     volumes:
       - ./kali/kali-files:/root
+      - ./scripts:/root/scripts
     network_mode: host
     command: /bin/bash -c "trap 'exit 0' INT; while true; do sleep 1; done"
 
